@@ -2,17 +2,6 @@
 
 This is a sample react todo app done step-by-step. This sample app was a part of react workshop.
 
-Instructions
-First clone this repository.
-
-
-Install dependencies. Make sure you already have nodejs & npm installed in your system.
-
-$ npm install # or yarn
-Run it
-
-$ npm start # or yarn start
-
 ## Instructions
 
 First clone this repository.
