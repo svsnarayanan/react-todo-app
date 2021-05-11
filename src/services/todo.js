@@ -1,27 +1,31 @@
 import update from 'immutability-helper';
 
+export function setDefaultTodo() {
+    localStorage.setItem('myTodoList', JSON.stringify([
+        {
+            id: 1,
+            text: 'Complete Assignment',
+            completed: false
+        },
+        {
+            id: 2,
+            text: 'Prepare breakfast',
+            completed: false
+        },
+        {
+            id: 3,
+            text: 'Laundry',
+            completed: false
+        }
+    ]))
+}
 /**
  * Get the list of todo items.
  * @return {Array}
  */
 export function getAll() {
-    return [
-        {
-            id: 1,
-            text: 'Learn Javascript',
-            completed: false
-        },
-        {
-            id: 2,
-            text: 'Learn React',
-            completed: false
-        },
-        {
-            id: 3,
-            text: 'Build a React App',
-            completed: false
-        }
-    ]
+    setDefaultTodo();
+    return JSON.parse(localStorage.getItem("myTodoList"))
 }
 
 export function getItemById(itemId) {
